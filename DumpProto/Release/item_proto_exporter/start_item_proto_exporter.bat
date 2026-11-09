@@ -1,0 +1,2 @@
+item_proto_exporter.exe item_proto item_proto.txt
+pause

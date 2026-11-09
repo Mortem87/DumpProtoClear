@@ -1,0 +1,65 @@
+﻿Build started 11.06.2016 18:34:22.
+     1>Project "C:\Users\Emre\Desktop\AleoN\DumpProto\dump_proto\dump_proto.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D "WIN32" /D _DEBUG /D _CONSOLE /D ___DUMP_PROTO__ /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt CsvFile.cpp dump_proto.cpp "ItemCSVReader.cpp" lzo.cpp tea.cpp
+         tea.cpp
+         lzo.cpp
+         ItemCSVReader.cpp
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\itemcsvreader.cpp(240): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\itemcsvreader.cpp(269): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\itemcsvreader.cpp(295): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\itemcsvreader.cpp(320): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\itemcsvreader.cpp(500): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\itemcsvreader.cpp(525): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\itemcsvreader.cpp(549): warning C4244: '=' : conversion from 'float' to 'int', possible loss of data
+         dump_proto.cpp
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(219): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(225): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(227): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(257): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(292): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(453): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(454): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(464): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(564): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(606): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(683): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(689): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(691): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(878): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(879): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\string.h(195) : see declaration of 'strncpy'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(1001): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+     1>c:\users\emre\desktop\aleon\dumpproto\dump_proto\dump_proto.cpp(1046): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(211) : see declaration of 'fopen'
+         CsvFile.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Emre\Desktop\AleoN\DumpProto\Debug\dump_proto.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Emre\Desktop\AleoN\DumpProto\Debug\dump_proto.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Emre\Desktop\AleoN\DumpProto\Debug\dump_proto.lib" /MACHINE:X86 /SAFESEH Debug\CsvFile.obj
+         Debug\dump_proto.obj
+         "Debug\ItemCSVReader.obj"
+         Debug\lzo.obj
+         Debug\tea.obj
+         C:\Users\Emre\Desktop\AleoN\DumpProto\Debug\lzo.lib
+     1>CsvFile.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     1>LINK : warning LNK4098: defaultlib 'LIBCMTD' conflicts with use of other libs; use /NODEFAULTLIB:library
+         dump_proto.vcxproj -> C:\Users\Emre\Desktop\AleoN\DumpProto\Debug\dump_proto.exe
+     1>Done Building Project "C:\Users\Emre\Desktop\AleoN\DumpProto\dump_proto\dump_proto.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:05.65

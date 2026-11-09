@@ -1,0 +1,39 @@
+DumpProtoClear es una herramienta de consola en C++ para generar los archivos binarios de prototipos de Metin2 a partir de tablas de texto. La solución de Visual Studio se llama Importer.sln.
+
+A grandes rasgos:
+
+Lee las tablas de objetos y monstruos, como item_proto.txt y mob_proto.txt. También contempla archivos auxiliares de nombres y datos de prueba, como item_names.txt, mob_names.txt y los archivos _test.
+Convierte los campos de texto —por ejemplo, tipos, banderas y valores— a las estructuras binarias que espera el cliente.
+Comprime los datos con LZO y los cifra con TEA para producir item_proto y mob_proto.
+Al ejecutarse, intenta generar ambos archivos automáticamente; no requiere argumentos de consola. En el caso de mob_proto, además vuelve a leer el archivo generado y muestra algunos datos como comprobación.
+La lógica principal está en dump_proto.cpp, y la compresión y el cifrado están en lzo.cpp.
+
+Importante: los archivos de texto deben estar en la carpeta de trabajo desde la que se ejecuta el programa. El start.bat de Release solo lanza dump_proto.exe; no copia las tablas. En esa carpeta vi los ejecutables y los prototipos binarios, pero no las tablas .txt, así que ejecutarlo desde ahí podría fallar al intentar reconstruirlos. No es una interfaz para editar prototipos ni exporta los binarios a texto.
+
+y si yo tengo los binarios, podemos aplicar el proceso inverso?
+
+3:19 AM
+
+
+
+
+Sí, en principio se pueden convertir los binarios de vuelta a tablas legibles. El proceso sería descifrar, descomprimir y luego interpretar los bytes usando la estructura que corresponde a esa versión de Metin2.
+
+De hecho, el proyecto ya contiene parte del camino inverso: LoadMobProto lee mob_proto y llama al descompresor. Pero ahora solo imprime el número y el nombre de cada monstruo; habría que completar la exportación, y crear una equivalente para item_proto.
+
+Hay un detalle importante: en lzo.cpp, la función que debería descifrar parece llamar a tea_encrypt en lugar de tea_decrypt. Eso podría impedir la lectura correcta y habría que revisarlo con los binarios concretos.
+
+También es posible que no se recupere el TXT original idéntico: comentarios, formato y algunos datos que no se guardaron en el binario se pierden. Pero sí podemos intentar reconstruir tablas legibles con los campos que el binario conserva. Además, debe coincidir la versión y estructura de los binarios; si corresponden a otra versión, puede hacer falta adaptar el lector.
+
+
+
+Sí. Añadí un proyecto independiente, item_proto_exporter.vcxproj, y lo incorporé a Importer.sln. El código está en item_proto_exporter.cpp.
+
+El exportador descifra con TEA, descomprime con LZO y genera item_proto.txt. También crea item_names.txt para conservar los nombres localizados que el binario guarda por separado. Las instrucciones están en el README.
+
+Probé el exportador con el Release\item_proto incluido en la solución: exportó 6.355 registros y las columnas resultaron consistentes. En 30 registros apareció el tipo de aplicación UNKNOWN_95, que no está definido en las tablas de conversión de esta solución; no inventé su significado.
+
+Para usarlo, desde la carpeta donde está tu binario:
+item_proto_exporter.exe item_proto item_proto.txt
+
+La compilación directa del código con el compilador de Visual Studio 2017 y la biblioteca LZO incluida funcionó. No pude verificar la compilación completa de la solución con MSBuild en este entorno. Tampoco pude comprobar todavía el binario real de tu versión 40250: la prueba fue con el archivo de muestra incluido. El programa comprueba la firma y el tamaño de registro, y avisará si tu binario usa otro formato; si lo ejecutas con tu archivo y compartes el resultado, podemos adaptar lo que falte.
